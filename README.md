@@ -1,5 +1,5 @@
 # Seedbox Installation Script
-[中文Readme](https://github.com/jerry048/Dedicated-Seedbox/blob/main/README-zh.md)
+[中文Readme](https://github.com/eros520/Dedicated-Seedbox-Arm/blob/main/README-zh.md)
 ### !!! The script will create a new user account to contain the BitTorrent clients using the provided password. Please use a strong password
 ### !!! The unit of Cache Size has been changed from GiB to MiB. This allow finer tunning and the script to be used in machine with less than 1GB of ram. 1GiB = 1024 MiB.
 ### !!! These scripts are only intended to run on freshly installed Debian 10/11
@@ -8,11 +8,11 @@ The Tweaked BBR would increase packet retransmission rate and waste your bandwid
 
 ## Usage
 ### Install.sh
-`bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) <username> <password> <Cache Size(unit:MiB)>`
+`bash <(wget -qO- https://raw.githubusercontent.com/eros520/Dedicated-Seedbox-Arm/main/Install.sh) <username> <password> <Cache Size(unit:MiB)>`
 
 ### Tune.sh if you have already installed clients (Likely to break something, becareful)
 
-`bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Tune.sh)`
+`bash <(wget -qO- https://raw.githubusercontent.com/eros520/Dedicated-Seedbox-Arm/main/Tune.sh)`
 
 ## Functions
 ### Install.sh
