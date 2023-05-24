@@ -53,15 +53,11 @@ The Tweaked BBR would increase packet retransmission rate and waste your bandwid
 
 - aio_threads default setting is 4 and should be good for HDD. For SSD or even NVMe server, you might consider increase it to 8 or even 16. 
 	- For qBittorrent 4.3.x - 4.5.x you can change it in the advance setting tab. 
-	- For qBittorrent 4.1.x, you can set it in /home/$username/.config/qBittorrent/qBittorrent.conf by adding `Session\AsyncIOThreadsCount=8` under [BitTorrent] section
-		- Please shut down qBittorrent before the editing
 	- For Deluge, you can install [ltconfig](https://github.com/ratanakvlun/deluge-ltconfig/releases/tag/v0.3.1) and edit through the plugins
 		- aio_threads=8
 
 - send_buffer_low_watermark, send_buffer_watermark & send_buffer_watermark_factor can be set to a lower value if you are running on a machine with poor I/O.
 	- For qBittorrent 4.3.x you can change it in the advance setting tab. 
-	- For qBittorrent 4.1.x, you can set it in /home/$username/.config/qBittorrent/qBittorrent.conf by adding `Session\SendBufferWatermark=5120`,`Session\SendBufferLowWatermark=1024`and`Session\SendBufferWatermarkFactor=150` under [BitTorrent] section
-		- Please shut down qBittorrent before the editing
 	- For Deluge, you can install [ltconfig](https://github.com/ratanakvlun/deluge-ltconfig/releases/tag/v0.3.1) and edit through the plugins
 		- send_buffer_low_watermark=1048576
 		- send_buffer_watermark=5242880
