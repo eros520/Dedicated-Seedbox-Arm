@@ -54,15 +54,11 @@
 
 - 异步 I/O 綫程数的基础设定是 4， 这设定对HDD比较友好. 假如你使用的是SSD甚至是NVMe的话, 你可以调整此参数到 8 甚至到 16. 
 	- 在qBittorrent 4.3.x 的话，你可以在高级选项栏目中更改此项设定. 
-	- 在qBittorrent 4.1.x 的话, 你可以在 /home/$username/.config/qBittorrent/qBittorrent.conf 里的 [BitTorrent] 栏目下加入 `Session\AsyncIOThreadsCount=8`
-		- 请在修改前关闭qBittorrent
 	- 在Deluge 的话，你可以通过[ltconfig](https://github.com/ratanakvlun/deluge-ltconfig/releases/tag/v0.3.1)更改此项设定
 		- aio_threads=8
 
 - 在一些 I/O 较差的机器，send_buffer_low_watermark, send_buffer_watermark & send_buffer_watermark_factor 这三项设定应该调低
 	- 在qBittorrent 4.3.x 的话，你可以在高级选项栏目中更改此项设定. 
-	- 在qBittorrent 4.1.x 的话，你可以在 /home/$username/.config/qBittorrent/qBittorrent.conf 里的 [BitTorrent] 栏目下加入`Session\SendBufferWatermark=5120`, `Session\SendBufferLowWatermark=1024`和 `ession\SendBufferWatermarkFactor=150`
-		- 请在修改前关闭qBittorrent
 	- 在Deluge 的话，你可以通过[ltconfig](https://github.com/ratanakvlun/deluge-ltconfig/releases/tag/v0.3.1)更改此项设定
 		- send_buffer_low_watermark=1048576
 		- send_buffer_watermark=5242880
