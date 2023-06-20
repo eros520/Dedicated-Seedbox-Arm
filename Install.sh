@@ -45,8 +45,7 @@ username=$1
 password=$2
 cache=$3
 
-#Converting the cache size to Deluge's unit  (16KiB)
-Cache_de=$(expr $cache \* 64)
+
 #Converting the cache to qBittorrent's unit (MiB)
 Cache_qB=$cache
 
@@ -81,8 +80,6 @@ normal_1; echo "Start Installing Seedbox Environment"; warn_2
 source <(wget -qO- https://raw.githubusercontent.com/eros520/Seedbox-Components-Arm/main/seedbox_installation.sh)
 Update
 Decision qBittorrent
-Decision Deluge
-Decision autoremove-torrents
 
 
 ## Tweaking
@@ -120,5 +117,4 @@ tput sgr0; clear
 normal_1; echo "Seedbox Installation Complete"
 publicip=$(curl https://ipinfo.io/ip)
 [[ ! -z "$qbport" ]] && echo "qBittorrent $version is successfully installed, visit at $publicip:$qbport"
-[[ ! -z "$deport" ]] && echo "Deluge $Deluge_Ver is successfully installed, visit at $publicip:$dewebport"
 [[ ! -z "$bbrx" ]] && echo "Tweaked BBR is successfully installed, please reboot for it to take effect"
