@@ -79,7 +79,7 @@ tput sgr0; clear
 normal_1; echo "Start Installing Seedbox Environment"; warn_2
 source <(wget -qO- https://raw.githubusercontent.com/eros520/Seedbox-Components-Arm/main/seedbox_installation.sh)
 Update
-Decision qBittorrent
+qBittorrent
 
 
 ## Tweaking
